@@ -23,6 +23,8 @@ namespace OdeToFood.Models
         public virtual string ReviewerName { get; set; }
         public virtual int RestaurantId { get; set; }
 
+        public virtual string Comment { get; set; }
+        public virtual int Likes { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
