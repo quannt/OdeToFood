@@ -64,14 +64,9 @@ namespace OdeToFood.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            var restaurant = _db.Query<Restaurant>()
-                .Select(r => new Restaurant
-                {
-                    Id = id
-                })
-                ;
+            Restaurant restaurant = _db.Query<Restaurant>().Single(r => r.Id == id);
 
-            return View(restaurant as Restaurant);
+            return View(restaurant);
         }
 
         //
@@ -95,13 +90,9 @@ namespace OdeToFood.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            var restaurant = _db.Query<Restaurant>().Select(
-                r => new Restaurant
-                {
-                    Id = id
-                });
+            Restaurant restaurant = _db.Query<Restaurant>().Single(r => r.Id == id);
 
-            return View(restaurant as Restaurant);
+            return View(restaurant);
         }
 
         //
@@ -111,11 +102,7 @@ namespace OdeToFood.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            var restaurant = _db.Query<Restaurant>().Select(
-                r => new Restaurant
-                {
-                    Id = id
-                });
+            Restaurant restaurant = _db.Query<Restaurant>().Single(r => r.Id == id);
             _db.Remove(restaurant);
             _db.SaveChanges();
             return RedirectToAction("Index");
