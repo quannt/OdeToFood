@@ -196,9 +196,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201502040605217_InitialCreate.cs" />
-    <Compile Include="Migrations\201502040605217_InitialCreate.Designer.cs">
-      <DependentUpon>201502040605217_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201502040709425_RemoveOwnerFromRestaurant.cs" />
+    <Compile Include="Migrations\201502040709425_RemoveOwnerFromRestaurant.Designer.cs">
+      <DependentUpon>201502040709425_RemoveOwnerFromRestaurant.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AboutModel.cs" />
@@ -343,8 +343,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502040605217_InitialCreate.resx">
-      <DependentUpon>201502040605217_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201502040709425_RemoveOwnerFromRestaurant.resx">
+      <DependentUpon>201502040709425_RemoveOwnerFromRestaurant.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
