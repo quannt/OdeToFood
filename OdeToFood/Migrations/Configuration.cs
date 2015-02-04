@@ -15,7 +15,7 @@ namespace OdeToFood.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(OdeToFood.Models.OdeToFoodDb context)
@@ -23,8 +23,8 @@ namespace OdeToFood.Migrations
            
 
             context.Restaurants.AddOrUpdate(r => r.Name,
-                new Restaurant { Name = "Little Vietnam", City = "Singapore", Country = "Singapire"},
-                new Restaurant { Name = "Long Phung", City = "Singapore", Country = "Singapire"},
+                new Restaurant { Name = "Little Vietnam", City = "Singapore", Country = "Singapore"},
+                new Restaurant { Name = "Long Phung", City = "Singapore", Country = "Singapore"},
                 new Restaurant
                 {
                     Name = "Don's", City = "Hanoi", Country = "Vietnam",

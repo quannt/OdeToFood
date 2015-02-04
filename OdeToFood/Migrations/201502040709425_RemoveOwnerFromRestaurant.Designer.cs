@@ -5,13 +5,13 @@ namespace OdeToFood.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class RemoveOwnerFromRestaurant : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RemoveOwnerFromRestaurant));
         
         string IMigrationMetadata.Id
         {
-            get { return "201502040605217_InitialCreate"; }
+            get { return "201502040709425_RemoveOwnerFromRestaurant"; }
         }
         
         string IMigrationMetadata.Source
